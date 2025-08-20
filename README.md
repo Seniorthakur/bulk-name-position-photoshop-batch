@@ -39,5 +39,35 @@ Anywhere you need to combine a **base design** with **dynamic text data**, this 
    Name,Position
    Jane Doe,Project Manager
    John Smith,Software Engineer
+3. **Run the script in Photoshop:**
+   - `Go to File → Scripts → Browse… and select the .jsx script`
+   - `Pick your PSD template`
+   - `Pick your TXT/CSV input file`
+   - `Choose an output folder`
+4. **The script updates text layers for each row and saves a PNG into your chosen folder.**
+
+⚙️ Technical Details
+- Written in Adobe ExtendScript (JSX)
+- Compatible with Photoshop on Windows & macOS
+- Uses standard APIs: LayerKind.TEXT, PNGSaveOptions, File, Folder
+- Auto-skips header rows (if they contain “name” and “position”)
+- Handles extra commas in positions by merging them into one field
+
+📌 Example Workflow
+
+**Input (TXT/CSV):**
+*Name,Position*
+- Leo Lion Manoj Tiwari,District Council President
+- Leo Lion Shiv Shankar Mandal,IPDP
+- Leo Lion Suresh Karki,Leo Club Chairperson
+
+
+**Output (PNG files):**
+- 1 - Leo Lion Manoj Tiwari.png
+- 2 - Leo Lion Shiv Shankar Mandal.png
+-3 - Leo Lion Suresh Karki.png
+
+
+*Each file contains the base PSD design with text layers updated accordingly.*
 
 
